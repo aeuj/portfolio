@@ -18,6 +18,6 @@ export default
   title: "contact me",
   image:"https://tistory1.daumcdn.net/tistory/5269774/attach/e7cb5772c5fe4409a8ef3ae1e1206ba3",
   content : "연락할 방법",
-  important : "blog, github"
+  important : "blog or github"
 },
 ]

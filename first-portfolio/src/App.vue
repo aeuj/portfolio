@@ -1,14 +1,23 @@
 <template>
+
   <header>
     <div class="header-box">
-      <div class="home">My</div>
+      <div class="home"><a href="#">My</a></div>
       <div class="header-wrap">
-        <div class="blog">blog</div>
-        <div class="git">git</div>
-        <div class="contact">contact me</div>
+        <div v-for="(div, i) in menu" :key="i" @click="modal = true; enter = i">{{ div }}</div>
       </div>
     </div>
   </header>
+    <!-- header submenu 모달창 -->
+    <div class="black-bg" v-if="modal == true">
+    <div class="white-bg">
+      <h4>{{ info[enter].title }}</h4>
+      <img :src="info[enter].image" style="width:200px" alt="티스토리로고">
+      <p>{{ info[enter].content }}</p>
+      <h5>{{ info[enter].important }}</h5>
+      <button @click="modal = false">닫기</button>
+    </div>
+  </div>
   <div class="wrap">
       <div class="profile">
         <img src="./assets/avata.png" alt="남색의 비니를 쓴 반팔티를 입은 사람">
@@ -32,7 +41,10 @@ export default {
   name: 'App',
   data(){
     return{
-
+      info : data,
+      menu : ['blog', 'git', 'contact me'],
+      modal: false,
+      enter: 0,
     }
   },
   components: {
@@ -56,12 +68,14 @@ export default {
     font-weight: normal;
     font-style: normal;
 }
-
 body {
   font-family:'Roboto';
   background-color: #181D31;  
   margin: 0;
   padding: 0;
+}
+a{
+  text-decoration: none;
 }
 header{
   display: flex;
@@ -79,6 +93,9 @@ header{
   padding: 30px;
   font-size: 30px;
 }
+header a{
+  color: #E6DDC4;
+}
 .header-wrap{
   display: flex;
   position: absolute;
@@ -88,6 +105,30 @@ header{
   margin-left: 40px;
   cursor: pointer;
   color: #F0E9D2;
+}
+.black-bg {
+  width: 100%; height:100%;
+  background: rgba(0,0,0,0.5);
+  position: fixed; padding: 20px;
+}
+.white-bg {
+  margin: 0 auto;
+  width: 70%; background: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 40px;
+} 
+button{
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #181D31;
+  color: #F0E9D2;
+}
+button:hover{
+  background-color: #678983;
+  color: #fff;
+  transition: .3s;
 }
 .home{
   color: #E6DDC4;
@@ -102,7 +143,11 @@ header{
 }
 .profile img{
   border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.profile img:hover{
   box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+  transition: 1s;
 }
 p {
   text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
