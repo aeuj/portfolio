@@ -1,0 +1,38 @@
+/* login.html , join.html, logout.html */
+.container{
+  max-width: 600px;
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'GangwonEdu_OTFBoldA';
+}
+h1{
+  text-align: center;
+  padding: 50px;
+}
+.btn-primary{
+  width: 40%;
+  margin: 20px 30px;
+}
+.mb-1{
+  display: flex;
+  align-items: center;
+}
+span{
+  width: 10%;
+  text-align: center;
+}
+.xi-log-in{
+  color: transparent;
+}
+/* logout.html */
+.container a{
+  display: block;
+  text-align: center;
+}
+.xi-login{
+  color: #222;
+}

@@ -1,0 +1,71 @@
+input{
+  border: 1px solid gray;
+  border-radius: 3px;
+  line-height: 35px;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.wrapper {
+  padding: 10px;
+  width: 45%;
+  margin: 0 auto;
+}
+.container div {
+  padding-top: 3px;
+  padding-bottom: 8px;
+}
+.title {
+  text-align: center;
+  font-weight: 700;
+}
+.email input {
+  width: 100%;
+}
+.emailCheck input {
+  width: 100%;
+}
+.name input {
+  width: 100%;
+}
+.nameCheck input {
+  width: 100%;
+}
+.password input {
+  width: 100%;
+}
+.passwordCheck input {
+  width: 100%;
+}
+button{
+  cursor: pointer;
+  height: 30px;
+  width: 100%;
+}
+.error{
+  font-size: 1px;
+  height: 20px;
+  color:red;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+button{
+  border-radius: 3px;
+}
+button:hover{
+  border: 1px solid #1F8A70;
+  color: #fff;
+  background: #00425A;
+  transition: 0.3s;
+}
+#signUpButton{
+  background-color: #FC7300;
+  color: #fff;
+}
+#signUpButton:hover{
+  border: 1px solid #1F8A70;
+  color: #fff;
+  background: #00425A;
+  transition: 0.3s;
+}

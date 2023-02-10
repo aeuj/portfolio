@@ -1,0 +1,50 @@
+
+/* 로그인이 안되어 있으면 글쓰기 메뉴가 보이지 않게 
+/* 참고 : https://blogpack.tistory.com/683 */
+
+/* detail 작성자이름 보이게하기 */
+/* join.html 에 로그인창은 모달로 만들어보기 */
+/* 겹치면 아이디를 바꾸라고 말해야할듯 */
+
+
+/* upload.html 가격 무조건 올리게 해야할 듯*/
+/* 작성자 이름이 안나옴 */
+
+
+/* 회원가입 간편가입도 만들어놓자 */
+
+
+
+/*  유저이름 디스플레이 하는방법
+  // 유저 정보 확인
+  // market 밑에<span class="ms-auto mx-2" id="userName"></span>
+  const 뺀거 = localStorage.getItem('user')
+    if(localStorage.getItem('user') != null){
+      $('#userName').html(JSON.parse(뺀거).displayName) 
+    }
+  
+  /* 로그인 확인 */
+  /* 유저 정보가 없으면 업로드버튼을 숨기기 만들자 */
+  firebase.auth().onAuthStateChanged((user)=>{
+    if(user){
+      console.log(user.uid);
+      console.log(user.email);
+      // 이름이 너무 늦게 떠서 로컬스토리지에 저장
+      // localStorage.setItem('정보이름', '값')
+      localStorage.setItem('user', JSON.stringify(user))
+    }
+  })
+*/
+
+
+
+알아서 해볼거
+
+- 로그아웃버튼 누르면 localStorage에서 user 데이터 삭제하는게 어떨까요
+- 혹은 onAuthStateChanged() 여기서 유저가 없을 때도 localStorage에 있던 user 삭제가 좋아보입니다
+- upload.html 페이지에서 로그인된 유저만 글올리기 버튼 누를 수 있게 버튼 감추거나 경고창 띄우거나 하려면?
+
+
+글번호 순서대로 정렬하기
+
+detail.html,mypage  에만 닉네임이 nav바에 뜨는데 전체적으로 다 뜨게 수정하기

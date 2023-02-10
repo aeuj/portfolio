@@ -1,0 +1,122 @@
+/* index.html */
+@font-face {
+  font-family: 'FUNFLOWSURVIVORKR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/FUNFLOWSURVIVORKR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GangwonEdu_OTFBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+a{
+  text-decoration: none;
+  color: #222;
+}
+.container{
+  font-family: 'GangwonEdu_OTFBoldA';
+}
+.navbar{
+  background-color: #206A5D;
+  font-family: 'FUNFLOWSURVIVORKR';
+}
+.navbar-brand{
+  color: #F58634;
+}
+.dropdown-toggle{
+  color: #81B214;
+}
+.index-line{
+  color: #F58634;
+}
+header{
+  width: 80%;
+  margin: 0 auto;
+}
+.product {
+  display: flex;
+  padding: 10px;
+  font-family: 'GangwonEdu_OTFBoldA';
+}
+.thumbnail {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+.product .price {
+  font-size: 16px;
+  font-weight: 600;
+}
+.product .title {
+  font-size: 17px;
+  font-weight: 600;
+}
+.product .date {
+  color: grey;
+  font-size: 13px;
+}
+/* upload.html */
+.uploadWrap{
+  font-family: 'GangwonEdu_OTFBoldA';
+}
+/* detail.html */
+.detailWrap{
+  font-family: 'GangwonEdu_OTFBoldA';
+}
+.detail-title-box{
+  display: flex;
+}
+.detail-title-box p{
+  margin-right: 30px;
+}
+.detail-title-box .writer{
+  margin-left: 5px;
+}
+.btn-wrap{
+  float: right;
+}
+.detailWrap{
+  max-width: 1040px;
+}
+.detail-name{
+  margin-top: 30px;
+}
+#edit{
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  border: 0;
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+}
+#edit:hover{
+  color: #b9b9b9;
+  background-color: dodgerblue;
+  transition: .2s;
+}
+#delete{
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  border: 0;
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+}
+#delete:hover{
+  color: #b9b9b9;
+  background-color: crimson;
+  transition: .3s;
+}
+/* mypage */
+.MypageWrap{
+  margin: 0 auto;
+  font-family: 'GangwonEdu_OTFBoldA';
+}
